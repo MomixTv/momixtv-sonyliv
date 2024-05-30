@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,21 +8,20 @@
   <script src="//content.jwplatform.com/libraries/SAHhwvZq.js"></script>
   <style>
     body {
-      margin: 0px
+      margin: 0px;
     }
-
     .jwplayer {
-      position: absolute !important
+      position: absolute !important;
     }
-
     .jwplayer.jw-flag-aspect-mode {
       min-height: 100%;
-      max-height: 100%
+      max-height: 100%;
     }
   </style>
 </head>
 <body>
   <script>
+    // Show confirmation dialog to join Telegram channel
     if (confirm("Join Our Telegram Channel @MomixTv")) {
       window.location.href = "https://t.me/momixtv";
     }
@@ -37,23 +37,26 @@
       window.location.href = "https://telegram.me/momixtv"; // Redirect to your preferred URL
     }
 
-    jwplayer("jwplayerDiv").setup({
-      file: "https://toxicify.pro/sliv/stream.m3u8?id=sony-bbc-earth-hd&e=.m3u8",
-      position: 'bottom',
-      autostart: true,
-      stretching: "",
-      width: "100%",
-      type: "hls",
-      logo: {
-        file: "https://i.postimg.cc/SRLhHQGy/photo-2024-05-18-16-43-58-removebg-preview.png",
-        hide: false,
-        position: "top-left",
-        margin: "15",
-        link: "https://t.me/momixtv"
-      }
+    // JWPlayer setup
+    document.addEventListener("DOMContentLoaded", function() {
+      jwplayer("jwplayerDiv").setup({
+        file: "https://toxicify.pro/sliv/stream.m3u8?id=sony-bbc-earth-hd&e=.m3u8",
+        autostart: true,
+        width: "100%",
+        type: "hls",
+        logo: {
+          file: "https://i.postimg.cc/SRLhHQGy/photo-2024-05-18-16-43-58-removebg-preview.png",
+          hide: false,
+          position: "top-left",
+          margin: "15",
+          link: "https://t.me/momixtv"
+        }
+      });
     });
   </script>
+
   <div id="jwplayerDiv"></div>
+  
   <script disable-devtool-auto='true' src='https://cdn.jsdelivr.net/npm/disable-devtool' clear-log='true' disable-select='true' disable-copy='true' disable-cut='true' disable-paste='true'></script>
 </body>
 </html>
